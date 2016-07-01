@@ -9,7 +9,7 @@ class qa_html_theme_layer extends qa_html_theme_base
 			if (qa_get_state() == 'edit' && qa_get_logged_in_level() >= QA_USER_LEVEL_SUPER ) {
 				// print_r($this->content);
 				$this->content['form_password'] = array(
-					'tags' => 'method="post" action="'.qa_opt('site_url').'test-plugin"',
+					'tags' => 'method="post" action="'.qa_opt('site_url').'change-password"',
 
 					'style' => 'wide',
 
