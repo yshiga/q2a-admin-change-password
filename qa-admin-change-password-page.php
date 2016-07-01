@@ -46,7 +46,7 @@ class qa_change_admin_password {
 		if ($dochangepassword) {
 			require_once QA_INCLUDE_DIR.'app/users-edit.php';
 
-			$inoldpassword = qa_post_text('oldpassword');
+			// $inoldpassword = qa_post_text('oldpassword');
 			$innewpassword1 = qa_post_text('newpassword1');
 			$innewpassword2 = qa_post_text('newpassword2');
 			$userid = qa_post_text('userid');
@@ -60,11 +60,11 @@ class qa_change_admin_password {
 			else {
 				$errors = array();
 
-				if ($haspassword && (strtolower(qa_db_calc_passcheck($inoldpassword, $useraccount['passsalt'])) != strtolower($useraccount['passcheck'])))
-					$errors['oldpassword'] = qa_lang('users/password_wrong');
-
-				$useraccount['password'] = $inoldpassword;
-				$errors = $errors + qa_password_validate($innewpassword1, $useraccount); // array union
+				// if ($haspassword && (strtolower(qa_db_calc_passcheck($inoldpassword, $useraccount['passsalt'])) != strtolower($useraccount['passcheck'])))
+				// 	$errors['oldpassword'] = qa_lang('users/password_wrong');
+				//
+				// $useraccount['password'] = $inoldpassword;
+				// $errors = $errors + qa_password_validate($innewpassword1, $useraccount); // array union
 
 				if ($innewpassword1 != $innewpassword2)
 					$errors['newpassword2'] = qa_lang('users/password_mismatch');
