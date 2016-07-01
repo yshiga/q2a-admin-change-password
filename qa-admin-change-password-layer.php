@@ -16,13 +16,13 @@ class qa_html_theme_layer extends qa_html_theme_base
 					'title' => qa_lang_html('users/change_password'),
 
 					'fields' => array(
-						'old' => array(
-							'label' => qa_lang_html('users/old_password'),
-							'tags' => 'name="oldpassword"',
-							'value' => qa_html(@$inoldpassword),
-							'type' => 'password',
-							'error' => qa_html(@$errors['oldpassword']),
-						),
+						// 'old' => array(
+						// 	'label' => qa_lang_html('users/old_password'),
+						// 	'tags' => 'name="oldpassword"',
+						// 	'value' => qa_html(@$inoldpassword),
+						// 	'type' => 'password',
+						// 	'error' => qa_html(@$errors['oldpassword']),
+						// ),
 
 						'new_1' => array(
 							'label' => qa_lang_html('users/new_password_1'),
