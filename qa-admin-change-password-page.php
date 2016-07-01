@@ -37,7 +37,7 @@ class qa_change_admin_password {
 	function process_request($request)
 	{
 		if (!qa_is_http_post()) {
-			qa_redirect('/');
+			qa_redirect();
 		};
 		$qa_content = qa_content_prepare();
 		$errors = array();
